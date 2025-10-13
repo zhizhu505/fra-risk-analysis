@@ -1,0 +1,76 @@
+# 铁路风险分析项目配置文件模板
+# 复制此文件为 config.yaml 并填入实际配置
+
+# 数据配置
+data:
+  raw_data_path: "data/raw/"
+  processed_data_path: "data/processed/"
+  output_path: "results/"
+  
+# 模型配置
+models:
+  random_forest:
+    n_estimators: 100
+    max_depth: 10
+    random_state: 42
+  
+  gradient_boosting:
+    n_estimators: 100
+    learning_rate: 0.1
+    max_depth: 3
+    random_state: 42
+  
+  logistic_regression:
+    random_state: 42
+    max_iter: 1000
+
+# 关联规则挖掘配置
+association_rules:
+  min_support: 0.05
+  min_confidence: 0.6
+  min_lift: 1.0
+
+# 特征融合配置
+feature_fusion:
+  method: "weighted_average"  # weighted_average, max, min, ensemble
+  weights:
+    association_score: 0.4
+    model_score: 0.4
+    confidence: 0.2
+
+# 优先级排序配置
+priority_ranking:
+  method: "multi_criteria"  # score_based, risk_level, multi_criteria
+  criteria_weights:
+    fused_score: 0.4
+    confidence: 0.3
+    frequency: 0.2
+    impact: 0.1
+
+# LLM配置（可选）
+llm:
+  provider: "openai"  # openai, anthropic, local
+  api_key: ""  # 在此填入API密钥
+  model: "gpt-3.5-turbo"
+  max_tokens: 1000
+  temperature: 0.7
+
+# 日志配置
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/analysis.log"
+
+# 可视化配置
+visualization:
+  style: "seaborn"
+  figure_size: [12, 8]
+  dpi: 300
+  color_palette: "husl"
+
+# 输出配置
+output:
+  save_models: true
+  save_plots: true
+  save_reports: true
+  report_format: "html"  # html, pdf, markdown
