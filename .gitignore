@@ -1,13 +1,127 @@
-# 忽略所有数据文件
-data/
-
-# 忽略Python虚拟环境
-.venv/
-venv/
-
-# 忽略IDE配置文件
-.idea/
-.vscode/
-
-# 忽略Python缓存
+# Python
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# 项目特定文件
+data/raw/*.csv
+data/raw/*.xlsx
+data/raw/*.xls
+data/processed/*.csv
+data/processed/*.xlsx
+data/processed/*.xls
+models/*.pkl
+models/*.joblib
+results/visualizations/*.png
+results/visualizations/*.jpg
+results/visualizations/*.pdf
+results/reports/*.html
+results/reports/*.pdf
+
+# 配置文件（包含敏感信息）
+config/api_keys.json
+config/secrets.json
+
+# 临时文件
+*.tmp
+*.temp
+scratch/
+temp/
+
+# 日志文件
+*.log
+logs/
+
+# IDE 文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+data/raw/
+Rail_Equipment_Accident_Incident_Data__Form_54__*.csv
