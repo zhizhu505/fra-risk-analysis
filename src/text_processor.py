@@ -196,6 +196,7 @@ def integrate_llm_analysis(text: str, llm_client=None) -> Dict[str, Any]:
         'extracted_entities': []
     }
 
+<<<<<<< HEAD
 
 def preprocess_text_columns(
     df: pd.DataFrame,
@@ -364,3 +365,5 @@ def configure_matplotlib_chinese(preferred_fonts: Optional[List[str]] = None) ->
 
     return _mpl.rcParams["font.sans-serif"]
 
+=======
+>>>>>>> main
