@@ -123,3 +123,5 @@ logs/
 .DS_Store
 Thumbs.db
 
+data/raw/
+Rail_Equipment_Accident_Incident_Data__Form_54__*.csv
