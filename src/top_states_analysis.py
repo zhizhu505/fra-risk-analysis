@@ -181,6 +181,17 @@ if __name__ == "__main__":
 	print("\n各州内事故类型占比（%），行合计约为 100：")
 	percent_xtab = compute_state_type_percentage_crosstab(csv_path=csv_path, include_na=False, decimals=2)
 	print(percent_xtab.to_string())
+	
+	# 保存交叉表为CSV文件
+	crosstab_output_path = os.path.join("data", "processed", "state_accident_type_percentage.csv")
+	try:
+		percent_xtab.to_csv(crosstab_output_path)
+		print(f"\n各州事故类型占比表已保存到: {crosstab_output_path}")
+	except PermissionError:
+		ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+		alt_crosstab_path = os.path.join("data", "processed", f"state_accident_type_percentage_{ts}.csv")
+		percent_xtab.to_csv(alt_crosstab_path)
+		print(f"\n原始文件被占用，已改存为: {alt_crosstab_path}")
 
 	# 基于 df_cleaned 选择核心特征并展示前 5 行与列名
 	print("\n核心特征选择示例（来源于 df_cleaned）：")
