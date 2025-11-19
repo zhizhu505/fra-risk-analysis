@@ -85,12 +85,8 @@ dmypy.json
 .pyre/
 
 # 项目特定文件
-data/raw/*.csv
-data/raw/*.xlsx
-data/raw/*.xls
-data/processed/*.csv
-data/processed/*.xlsx
-data/processed/*.xls
+data/raw/*
+data/processed/*
 models/*.pkl
 models/*.joblib
 results/visualizations/*.png
