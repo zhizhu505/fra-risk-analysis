@@ -6,6 +6,7 @@ scipy>=1.9.0
 # 机器学习
 scikit-learn>=1.1.0
 mlxtend>=0.20.0
+xgboost>=1.7.0
 
 # 数据可视化
 matplotlib>=3.5.0
