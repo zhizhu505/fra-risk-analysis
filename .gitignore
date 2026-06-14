@@ -92,8 +92,12 @@ models/*.joblib
 results/visualizations/*.png
 results/visualizations/*.jpg
 results/visualizations/*.pdf
-results/reports/*.html
-results/reports/*.pdf
+results/reports/**/*.csv
+results/reports/**/*.png
+results/reports/**/*.jpg
+results/reports/**/*.html
+results/reports/**/*.pdf
+results/transformer_fusion_experiment_v1/
 
 # 配置文件（包含敏感信息）
 config/api_keys.json

@@ -1,7 +1,0 @@
-FRA REAIR 日期转换演示摘要
-==================================================
-原始数据形状: (222956, 161)
-转换后数据形状: (222956, 179)
-新增列数: 18
-新创建的列: ['accident_date', 'accident_year', 'accident_month', 'accident_quarter', 'accident_day_of_year', 'accident_weekday', 'accident_weekday_name', 'Time_parsed']
-日期特征: ['accident_date_year', 'accident_date_month', 'accident_date_day', 'accident_date_quarter', 'accident_date_weekday', 'accident_date_weekday_name', 'accident_date_is_weekend', 'accident_date_day_of_year', 'accident_date_week_of_year', 'accident_date_season']
